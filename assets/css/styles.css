@@ -52,10 +52,15 @@ nav a {
     font-size: 1.6rem;
     color: #5f5b53;
 }
-.header nav a:hover,
+
 nav .active a {
     text-shadow: 1px 0 0 currentColor;
     color: #171100;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
 }
 /* underline Home */
 nav .action {
