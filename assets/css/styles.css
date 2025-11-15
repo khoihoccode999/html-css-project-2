@@ -199,7 +199,6 @@ nav .active a::after {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    margin-left: 18px;
     margin-right: 14px;
 }
 .hero-summary img {
