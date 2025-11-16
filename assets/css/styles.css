@@ -55,11 +55,13 @@ nav a {
 
 nav .active a,
 nav li a:hover {
+    transition: 1s;
     text-shadow: 1px 0 0 currentColor;
     color: #171100;
 }
 
 .btn:hover {
+    transition: 1s;
     opacity: 0.9;
     cursor: pointer;
 }
@@ -291,6 +293,7 @@ nav .active a::after {
     border: 1px solid #e2dfda;
 }
 .popular .course-item:hover {
+    transition: 1s;
     border: none;
     box-shadow: 0px 18px 36px 0px #0000000d;
 }
@@ -336,6 +339,7 @@ nav .active a::after {
     border-radius: 25px;
 }
 .popular .course-list .foot .book-btn:hover {
+    transition: 1s;
     background-color: var(--primary-color);
     border: none;
 }
@@ -406,7 +410,7 @@ nav .active a::after {
 
 /* ====================== Features 1 ====================== */
 .features {
-    padding-top: 115px;
+    padding-top: 190px;
 }
 .features .body {
     display: flex;
@@ -450,7 +454,7 @@ nav .active a::after {
 
 /* ====================== Features 2 ====================== */
 .features-2nd {
-    margin-top: 105px;
+    padding: 190px 0;
 }
 .features-2nd .body {
     flex-flow: row-reverse;
@@ -462,4 +466,105 @@ nav .active a::after {
 .features-2nd .images img {
     width: 470px;
     height: 440px;
+}
+
+/* ====================== Blog ====================== */
+.blog {
+    padding-top: 105px;
+    background-color: #fffcf4;
+}
+
+.blog-top .heading {
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
+}
+.blog-top .desc {
+    margin: 25px auto 60px auto;
+    width: 448px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #696262;
+}
+.blog-list {
+    display: flex;
+    gap: 30px;
+}
+.blog-list .item {
+    width: 370px;
+    height: 467px;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+.blog-list .item:hover {
+    box-shadow: 0px 16px 32px 0px #0000000d;
+    transition: 1s;
+}
+.blog-list .thumb {
+    width: 370px;
+    height: 250px;
+    border-radius: 16px 16px 0 0;
+}
+.blog-list .info {
+    padding: 20px;
+}
+.blog-list .info .date::before {
+    margin-right: 5px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    content: "";
+    height: 6px;
+    width: 6px;
+    background-color: var(--primary-color);
+}
+.blog-list .info .date {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: #5f5b53;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.blog-list .info .date::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -10px;
+    width: 160px;
+    height: 1px;
+    background-color: #e2dfda;
+}
+
+.blog-list .title {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+}
+.blog-list .btn {
+    margin-top: 15px;
+}
+.blog-list .btn:hover {
+    background-color: var(--primary-color);
+}
+.blog .dots {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.blog .dot {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #634700;
+}
+.blog .active {
+    background-color: var(--primary-color);
 }
