@@ -557,6 +557,7 @@ nav .active a::after {
     display: flex;
     justify-content: center;
     gap: 5px;
+    padding-bottom: 96px;
 }
 .blog .dot {
     display: block;
@@ -567,4 +568,76 @@ nav .active a::after {
 }
 .blog .active {
     background-color: var(--primary-color);
+}
+
+/* ====================== Footer ====================== */
+.footer {
+    padding-top: 100px;
+    padding-bottom: 35px;
+    background-color: #2e2100;
+    color: #ffffff;
+}
+.footer a {
+    color: #bfbcb2;
+}
+.footer .row {
+    display: flex;
+    gap: 150px;
+}
+.footer .column {
+    display: inline-block;
+}
+
+.footer .column .desc {
+    margin-top: 30px;
+    line-height: 26px;
+    font-weight: 400;
+    font-size: 14px;
+    width: 267px;
+    height: 78px;
+    color: #bfbcb2;
+}
+.footer .column .socials {
+    display: flex;
+    margin-top: 25px;
+    gap: 20px;
+}
+.footer .column .title::after {
+    margin-top: 20px;
+    margin-bottom: 28px;
+    display: block;
+    content: "";
+    background-color: #59554b;
+    width: 130px;
+    height: 1px;
+}
+.footer .column .list a {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 26px;
+}
+.footer .column .title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+}
+.footer .column a strong {
+    color: #ffffff;
+}
+.footer .copyright::before {
+    top: -28px;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1170px;
+    height: 1px;
+    background-color: #59554b;
+}
+.footer .copyright {
+    margin-top: 67px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: #807d74;
 }
