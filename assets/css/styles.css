@@ -17,6 +17,11 @@ a {
     text-decoration: none;
     color: black;
 }
+.main-content {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* ====================== Header ====================== */
 
 .header {
@@ -27,11 +32,6 @@ a {
     font-weight: 700;
     letter-spacing: -0.02em;
     color: #171100;
-}
-.main-content {
-    width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
 }
 .header .body {
     display: flex;
@@ -285,10 +285,13 @@ nav .active a::after {
     padding: 10px 22px 0 22px;
 }
 .popular .course-item {
-    width: 370px;
     height: 466px;
     opacity: 1;
     border-radius: 12px;
+    border: 1px solid #e2dfda;
+}
+.popular .course-item:hover {
+    border: none;
     box-shadow: 0px 18px 36px 0px #0000000d;
 }
 .popular .course-item .thumb {
@@ -335,4 +338,68 @@ nav .active a::after {
 .popular .course-list .foot .book-btn:hover {
     background-color: var(--primary-color);
     border: none;
+}
+
+/* ====================== Feedback ====================== */
+.feedback {
+    margin-top: 200px;
+    height: 380px;
+    background-color: #2e2100;
+}
+
+.feedback .feedback-item {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 95px;
+}
+.feedback-item .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 999px;
+}
+
+.feedback-item .title {
+    margin-top: 15px;
+    color: #f7f7f7;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.feedback-item .desc {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #bfbcb2;
+}
+.feedback-item .dots {
+    margin-top: 25px;
+    display: flex;
+    gap: 5px;
+}
+.feedback-item .dot {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #634700;
+}
+.feedback-item .active {
+    background-color: var(--primary-color);
+}
+.feedback-item .open-quotes {
+    width: 30px;
+    height: 28px;
+    position: relative;
+    left: -25px;
+}
+.feedback-item .content blockquote {
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 26px;
+    line-height: 40px;
+    color: #ffffff;
+    width: 740px;
+    height: 160px;
 }
