@@ -500,24 +500,27 @@ nav .active a::after {
     background-color: #fffcf4;
 }
 
+.blog .blog-top {
+    text-align: center;
+}
 .blog-top .heading {
     font-size: 38px;
     line-height: 48px;
-    text-align: center;
+    display: block;
 }
 .blog-top .desc {
-    margin: 25px auto 60px auto;
+    margin: 16px auto auto;
     width: 448px;
     height: 56px;
     font-size: 16px;
     line-height: 28px;
-    text-align: center;
     color: #696262;
 }
 .blog-list {
     display: flex;
     gap: 30px;
     overflow: hidden;
+    margin-top: 55px;
 }
 .blog-list .item {
     width: calc(33.33% - 20px);
