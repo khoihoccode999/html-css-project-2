@@ -22,6 +22,18 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+.line-clamp {
+    display: -webkit-box;
+    --webkit-line-clamp: var(--line-clamp, 1);
+    --webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+.break-all {
+    word-break: break-all;
+}
 /* ====================== Header ====================== */
 
 .header {
@@ -242,6 +254,7 @@ nav .active a::after {
 .popular .popular-top {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .popular .info .lv2 {
@@ -261,37 +274,43 @@ nav .active a::after {
 }
 
 .popular .popular-top .controls {
-    margin-left: auto;
+    display: flex;
+    gap: 18px;
 }
 
-.popular .popular-top .controls img {
+.popular .popular-top .controls svg {
     width: 6px;
     height: 12px;
 }
-
 .popular .popular-top .controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: none;
     border-radius: 50%;
     border: 1px solid var(--primary-color);
+    color: var(--primary-color);
     padding: 0;
     width: 40px;
     height: 40px;
 }
-
-.popular .popular-top .controls button:last-child {
+.popular .popular-top .controls button:hover {
+    color: white;
     background-color: var(--primary-color);
 }
+
 .popular .course-list {
-    padding-top: 35px;
+    margin-top: 35px;
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
 }
 
 .popular .course-list .info,
 .foot {
-    padding: 10px 22px 0 22px;
+    padding: 16px 22px 0 22px;
 }
 .popular .course-item {
+    flex: 1;
     height: 466px;
     opacity: 1;
     border-radius: 12px;
@@ -299,24 +318,29 @@ nav .active a::after {
 }
 .popular .course-item:hover {
     transition: 1s;
-    border: none;
+    border-color: transparent;
     box-shadow: 0px 18px 36px 0px #0000000d;
 }
 .popular .course-item .thumb {
-    width: 370px;
+    width: calc(100% + 2px);
     height: 278px;
+    margin: -1px;
+    object-fit: cover;
     border-radius: 12px 12px 0 0;
 }
-.popular .head {
+.popular .head,
+.rating,
+.foot {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 .popular .course-item .info .title {
-    width: 159px;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 18px;
     line-height: 30px;
+    padding-right: 6px;
 }
 .popular .course-item .line-2 {
     width: 326px;
@@ -326,11 +350,6 @@ nav .active a::after {
     line-height: 26px;
 }
 
-.popular .course-list .foot {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 .popular .course-list .foot .price {
     font-family: Poppins;
     font-weight: 600;
@@ -338,9 +357,7 @@ nav .active a::after {
     line-height: 30px;
 }
 .popular .course-list .foot .book-btn {
-    width: 118px;
-    height: 50px;
-    opacity: 1;
+    border: none;
     border-radius: 25px;
 }
 .popular .course-list .foot .book-btn:hover {
@@ -355,10 +372,16 @@ nav .active a::after {
     height: 380px;
     background-color: #2e2100;
 }
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+}
 
 .feedback .feedback-item {
     display: flex;
     justify-content: space-between;
+    flex-shrink: 0;
+    width: 100%;
     padding-top: 95px;
 }
 .feedback-item .avatar {
@@ -436,8 +459,7 @@ nav .active a::after {
     margin-left: 22px;
 }
 .features .content {
-    width: 470px;
-    height: 322px;
+    width: 41%;
 }
 .features .content .heading {
     font-weight: 700;
@@ -465,8 +487,7 @@ nav .active a::after {
     flex-flow: row-reverse;
 }
 .features-2nd .content {
-    width: 570px;
-    height: 298px;
+    width: 49%;
 }
 .features-2nd .images img {
     width: 470px;
@@ -496,10 +517,10 @@ nav .active a::after {
 .blog-list {
     display: flex;
     gap: 30px;
+    overflow: hidden;
 }
 .blog-list .item {
-    width: 370px;
-    height: 467px;
+    width: calc(33.33% - 20px);
     border-radius: 16px;
     background-color: #ffffff;
 }
